@@ -19,6 +19,7 @@ public class Criminal {
     private CriminalRecord criminalRecord;
 
     @OneToOne(cascade = CascadeType.ALL)
+    @Column(nullable = false)
     private Procuratorate procuratorate;
 
     public long getId() {

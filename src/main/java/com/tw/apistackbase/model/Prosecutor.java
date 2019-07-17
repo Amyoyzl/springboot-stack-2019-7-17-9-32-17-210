@@ -1,21 +1,17 @@
 package com.tw.apistackbase.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "procuratorate")
-public class Procuratorate {
+@Table(name = "prosecutor")
+public class Prosecutor {
 
     @Id
     @GeneratedValue
     private long id;
 
-    @Column(nullable = false, columnDefinition = "varchar(50)", unique = true)
+    @Column(nullable = false,columnDefinition = "varchar(255)")
     private String name;
-
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Prosecutor> prosecutors;
 
     public long getId() {
         return id;
