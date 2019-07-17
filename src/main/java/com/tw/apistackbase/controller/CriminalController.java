@@ -1,7 +1,12 @@
 package com.tw.apistackbase.controller;
 
 import com.tw.apistackbase.model.Criminal;
+import com.tw.apistackbase.model.CriminalRecord;
+import com.tw.apistackbase.model.Prosecutor;
+import com.tw.apistackbase.repository.CriminalRecordRepository;
 import com.tw.apistackbase.repository.CriminalRepository;
+import com.tw.apistackbase.repository.ProcuratorateRepository;
+import com.tw.apistackbase.repository.ProsectorRepository;
 import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -17,6 +22,15 @@ public class CriminalController {
 
     @Autowired
     private CriminalRepository repository;
+
+    @Autowired
+    private CriminalRecordRepository criminalRecordRepository;
+
+    @Autowired
+    private ProcuratorateRepository procuratorateRepository;
+
+    @Autowired
+    private ProsectorRepository prosectorRepository;
 
     @PostMapping
     public Criminal add(@RequestBody Criminal criminal){
@@ -44,5 +58,6 @@ public class CriminalController {
     public void delete(@PathVariable long id) {
         repository.deleteById(id);
     }
+
 
 }
