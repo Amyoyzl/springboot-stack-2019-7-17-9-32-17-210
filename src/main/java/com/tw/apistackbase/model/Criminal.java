@@ -15,6 +15,9 @@ public class Criminal {
     @Column(nullable = false)
     private long time;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private CriminalRecord criminalRecord;
+
     public long getId() {
         return id;
     }
@@ -37,5 +40,13 @@ public class Criminal {
 
     public void setTime(long time) {
         this.time = time;
+    }
+
+    public CriminalRecord getCriminalRecord() {
+        return criminalRecord;
+    }
+
+    public void setCriminalRecord(CriminalRecord criminalRecord) {
+        this.criminalRecord = criminalRecord;
     }
 }

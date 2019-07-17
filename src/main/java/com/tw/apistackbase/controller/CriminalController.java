@@ -32,14 +32,12 @@ public class CriminalController {
 
     @GetMapping
     public List<Criminal> getAll() {
-        return repository.findAll(new Sort(Sort.Direction.DESC, "time"));
+        return repository.findByOrderByTimeDesc();
     }
 
     @GetMapping(params = "name")
     public List<Criminal> getByName(@RequestParam String name) {
-        return repository.findAll().stream()
-                .filter(criminal -> criminal.getName().contains(name))
-                .collect(Collectors.toList());
+        return repository.findByName(name);
     }
 
     @DeleteMapping("/{id}")
