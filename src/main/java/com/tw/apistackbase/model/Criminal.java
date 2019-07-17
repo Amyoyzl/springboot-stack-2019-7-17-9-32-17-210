@@ -18,6 +18,9 @@ public class Criminal {
     @OneToOne(cascade = CascadeType.ALL)
     private CriminalRecord criminalRecord;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    private Procuratorate procuratorate;
+
     public long getId() {
         return id;
     }
@@ -48,5 +51,13 @@ public class Criminal {
 
     public void setCriminalRecord(CriminalRecord criminalRecord) {
         this.criminalRecord = criminalRecord;
+    }
+
+    public Procuratorate getProcuratorate() {
+        return procuratorate;
+    }
+
+    public void setProcuratorate(Procuratorate procuratorate) {
+        this.procuratorate = procuratorate;
     }
 }
