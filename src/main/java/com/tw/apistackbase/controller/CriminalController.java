@@ -2,9 +2,9 @@ package com.tw.apistackbase.controller;
 
 import com.tw.apistackbase.model.Criminal;
 import com.tw.apistackbase.repository.CriminalRepository;
+import org.jboss.logging.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,6 +40,11 @@ public class CriminalController {
         return repository.findAll().stream()
                 .filter(criminal -> criminal.getName().contains(name))
                 .collect(Collectors.toList());
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable long id) {
+        repository.deleteById(id);
     }
 
 }
