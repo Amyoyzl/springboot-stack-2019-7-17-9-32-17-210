@@ -1,0 +1,12 @@
+2019-07-17 20:15:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CRIMINAL_CASE([*]“CASE1”,4352425334523） "; SQL statement:
+insert into criminal_case(“case1”,4352425334523） [42000-197]
+2019-07-17 20:15:56 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CRIMINAL_CASE VALUES([*]“CASE1”,4352425334523） "; SQL statement:
+insert into criminal_case values(“case1”,4352425334523） [42000-197]
+2019-07-17 20:16:50 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CRIMINAL_CASE (NAME,TIME) VALUES([*]“CASE1”,4352425334523） "; SQL statement:
+insert into criminal_case (name,time) values(“case1”,4352425334523） [42000-197]
+2019-07-17 20:17:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "INSERT INTO CRIMINAL_CASE (NAME,TIME) VALUES([*]“CASE1”, ""4352425334523""） "; SQL statement:
+insert into criminal_case (name,time) values(“case1”, "4352425334523"） [42000-197]
