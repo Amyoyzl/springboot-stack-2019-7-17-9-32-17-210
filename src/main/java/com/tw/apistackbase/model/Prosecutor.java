@@ -1,5 +1,7 @@
 package com.tw.apistackbase.model;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
 
 @Entity

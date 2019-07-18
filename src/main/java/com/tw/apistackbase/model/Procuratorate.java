@@ -15,6 +15,7 @@ public class Procuratorate {
     private String name;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "procuratorate_id")
     private List<Prosecutor> prosecutors;
 
     public long getId() {

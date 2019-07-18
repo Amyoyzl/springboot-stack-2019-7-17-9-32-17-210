@@ -18,4 +18,6 @@ public interface CriminalRepository extends JpaRepository<Criminal, Long> {
 
     void deleteById(long id);
 
+
+
 }

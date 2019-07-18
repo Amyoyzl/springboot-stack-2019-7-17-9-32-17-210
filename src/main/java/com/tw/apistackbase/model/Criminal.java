@@ -16,9 +16,11 @@ public class Criminal {
     private long time;
 
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(nullable = false)
     private CriminalRecord criminalRecord;
 
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(nullable = false)
     private Procuratorate procuratorate;
 
     public long getId() {
