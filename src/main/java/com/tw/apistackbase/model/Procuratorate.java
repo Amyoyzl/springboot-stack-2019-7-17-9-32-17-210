@@ -14,9 +14,13 @@ public class Procuratorate {
     @Column(nullable = false, columnDefinition = "varchar(50)", unique = true)
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinColumn(name = "procuratorate_id")
     private List<Prosecutor> prosecutors;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "procuratorate_id")
+    private List<Criminal> criminals;
 
     public long getId() {
         return id;
@@ -32,5 +36,13 @@ public class Procuratorate {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<Criminal> getCriminals() {
+        return criminals;
+    }
+
+    public void setCriminals(List<Criminal> criminals) {
+        this.criminals = criminals;
     }
 }

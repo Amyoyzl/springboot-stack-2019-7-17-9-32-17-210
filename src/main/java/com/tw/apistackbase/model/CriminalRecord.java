@@ -40,4 +40,5 @@ public class CriminalRecord {
     public void setSubjectiveDescription(String subjectiveDescription) {
         this.subjectiveDescription = subjectiveDescription;
     }
+
 }
